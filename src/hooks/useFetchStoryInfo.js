@@ -24,9 +24,8 @@ export default function useFetchStoryrInfo(item) {
                     getUserItems(res.kids).then((res) => {
                         const comments = res.filter((c) => c && c.type === 'comment' && !c.deleted && !c.dead)
                         setComments(comments)
+                        setCommentsLoading(false)
                     })
-
-                    setCommentsLoading(false)
                 }
                 else {
                     setCommentsLoading(false)
