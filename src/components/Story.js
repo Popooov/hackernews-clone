@@ -59,7 +59,7 @@ export default function Story({ by, about, date, karma, descendants, id, storyID
                                 </Link>
                             <span> comments</span>
                         </div>
-                        {text && <div className='comment-text' dangerouslySetInnerHTML={{__html: `<p>${text}</p>`}} />}
+                        {text && <div className={`comment-text-${theme}`} dangerouslySetInnerHTML={{__html: `<p>${text}</p>`}} />}
                     </div>
                 )
             }
