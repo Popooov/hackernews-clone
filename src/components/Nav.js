@@ -36,7 +36,7 @@ export default function Nav({ toggleTheme }) {
                 className='btn-clear'
                 onClick={toggleTheme}
             >
-                {theme === 'light' ? '🌚' : '🌞'}
+                {theme === 'light' ? '🌃' : '🌇'}
             </button>
         </div>
     )
