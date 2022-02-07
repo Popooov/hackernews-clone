@@ -3,11 +3,12 @@ import PropTypes from 'prop-types'
 
 const styles = {
     content: {
-      fontSize: '30px',
+      fontSize: '1.25em',
+      fontWeight: 'bold',
       position: 'absolute',
       left: '0',
       right: '0',
-      marginTop: '1.5em',
+      marginTop: '5em',
       textAlign: 'center',
     }
 }
