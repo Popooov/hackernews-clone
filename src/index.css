@@ -30,6 +30,7 @@ h2 {
   display: flex;
   flex-direction: column;
   padding: 2em 4em;
+  max-width: 1000px;
 }
 
 @media (max-width: 500px) {
@@ -81,10 +82,11 @@ ul.nav-flex {
   color: #E0E0E0;
 }
 
-.btn-clear {
+.btn-theme {
   border: none;
   background: transparent;
   padding: 0.2em;
+  cursor: pointer;
 }
 
 .story-info {
