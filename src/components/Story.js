@@ -55,7 +55,7 @@ export default function Story({ by, about, date, karma, descendants, id, storyID
                                     pathname:'/story',
                                     search: `?id=${storyID}`
                                 }}>
-                                    {descendants}
+                                    {!descendants && '0'}
                                 </Link>
                             <span> comments</span>
                         </div>
