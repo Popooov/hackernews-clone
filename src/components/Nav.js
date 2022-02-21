@@ -42,16 +42,8 @@ export default function Nav({ toggleTheme }) {
                     </NavLink>
                 </li>
             </ul>
-            {/* <button
-                style={{fontSize: 30}}
-                className='btn-theme'
-                onClick={toggleTheme}
-            >
-                {theme === 'light' ? '🌙' : '🌞'}
-            </button> */}
             <label className="switch">
                 <input type="checkbox" onChange={toggleTheme} />
-                {/* {theme === 'light' ? <span role='img' class="slider round">🌙</span> : <span class="slider round">☀</span>} */}
                 {
                     theme === 'light'
                     ? 
