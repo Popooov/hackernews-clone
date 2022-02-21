@@ -22,7 +22,7 @@ function App() {
             <div className='container'>
               <Nav toggleTheme={toggleTheme} />
 
-              <React.Suspense fallback={Loading}>
+              <React.Suspense fallback={<Loading />}>
                 <Switch>
                   <Route exact path='/' component={TopStories} />
                   <Route exact path='/new' component={NewStories} />

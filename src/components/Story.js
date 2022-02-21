@@ -11,7 +11,11 @@ export default function Story({ by, about, date, karma, descendants, id, storyID
         <React.Fragment>
             {url && type === 'story' ?
                 <div className={`story-info-${theme} story-info`}>
-                    <a href={url} className={`title-link title-link-${theme}`} dangerouslySetInnerHTML={{__html: `<p>${title}</p>`}} />
+                    <a 
+                        href={url} 
+                        className={`title-link title-link-${theme}`} 
+                        dangerouslySetInnerHTML={{__html: `<p>${title}</p>`}} 
+                    />
                     <div className='user-data'>
                         <span>by </span> 
                             <Link className={`link-${theme}`} to={{
@@ -34,12 +38,15 @@ export default function Story({ by, about, date, karma, descendants, id, storyID
                 :
                 (!karma && type !== 'comment' 
                     &&
-                    <div className='story-info'>
+                    <div className={`story-info-${theme} story-info`}>
                             <Link className={`link-${theme}`} to={{
                                 pathname: '/story',
                                 search: `?id=${storyID}`
                             }}>
-                                <div className={`title-link title-link-${theme}`} dangerouslySetInnerHTML={{__html: `<p>${title}</p>`}} />
+                                <div 
+                                    className={`title-link title-link-${theme}`}
+                                    dangerouslySetInnerHTML={{__html: `<p>${title}</p>`}}
+                                />
                             </Link>
                         <div className='user-data'>
                             <span>by </span> 
