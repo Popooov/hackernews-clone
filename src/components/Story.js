@@ -24,7 +24,7 @@ export default function Story({ by, about, date, karma, descendants, id, storyID
                             }}>
                                 {by}
                             </Link>
-                        <span>{` on ${date} `}</span>
+                        <span> on {date} </span>
                         <span>with </span>
                             <Link className={`link-${theme}`} to={{
                                 pathname:'/story',
@@ -62,11 +62,11 @@ export default function Story({ by, about, date, karma, descendants, id, storyID
                                     pathname:'/story',
                                     search: `?id=${storyID}`
                                 }}>
-                                    {!descendants && '0'}
+                                    {descendants === false ? '0' : descendants}
                                 </Link>
                             <span> comments</span>
                         </div>
-                        {text && <div className={`comment-text-${theme}`} dangerouslySetInnerHTML={{__html: `<p>${text}</p>`}} />}
+                        {text && <div className={`comment-text comment-text-${theme}`} dangerouslySetInnerHTML={{__html: `<p>${text}</p>`}} />}
                     </div>
                 )
             }

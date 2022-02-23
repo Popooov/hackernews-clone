@@ -202,6 +202,7 @@ input:checked + .slider:before {
 }
 
 .user-data {
+  margin-bottom: 1.5em;
   font-size: 1.1rem;
   color: #9e9e9e;
 }
@@ -219,9 +220,13 @@ input:checked + .slider:before {
   margin-top: 1em;
 }
 
+.comment-text {
+  margin-bottom: 3em;
+}
+
 .link-light,
-.comment-text-light,
-.comment-text-dark {
+.comment-link-light,
+.comment-text-light {
   color: #212121;
 }
 
@@ -229,7 +234,7 @@ input:checked + .slider:before {
   color: #E0E0E0;
 }
 
-.comment-link-light, 
+.comment-text-dark, 
 .comment-link-dark {
   color: #212121;
 }
@@ -252,6 +257,23 @@ input:checked + .slider:before {
 .comment-text-light p,
 .comment-text-dark p {
   margin-top: 1em;
+}
+
+pre {
+  background: white;
+  border: 1px solid #ddd;
+  border-left: 3px solid #81D4FA;
+  color: #9e9e9e;
+  page-break-inside: avoid;
+  font-family: monospace;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1em 1.5em;
+  display: block;
+  word-wrap: break-word;
 }
 
 /* Media query */
