@@ -1,14 +1,14 @@
-import React from 'react'
+import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import ThemeContext from '../contexts/theme'
 
 export default function Story({ by, about, date, karma, descendants, id, storyID, url, title, type, text, comment, author }) {
 
-    const theme = React.useContext(ThemeContext)
+    const theme = useContext(ThemeContext)
 
     return (
-        <React.Fragment>
+        <>
             {url && type === 'story' ?
                 <div className={`story-info-${theme} story-info`}>
                     <a 
@@ -97,7 +97,7 @@ export default function Story({ by, about, date, karma, descendants, id, storyID
                     <div className={`comment-text comment-text-${theme}`} dangerouslySetInnerHTML={{__html: `<p>${comment}</p>`}} />
                 </div>
             )}
-        </React.Fragment>
+        </>
     )
 }
 

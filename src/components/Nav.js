@@ -1,11 +1,7 @@
-import React from 'react'
+import { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
 import ThemeContext from '../contexts/theme'
 import PropTypes from 'prop-types'
-
-// const activeStyle = {
-//     color: '#ff5722',
-// }
 
 const activeStyleLight = {
     color: '#fff',
@@ -19,7 +15,7 @@ const activeStyleDark = {
 
 export default function Nav({ toggleTheme }) {
 
-    const theme = React.useContext(ThemeContext)
+    const theme = useContext(ThemeContext)
     const activeStyle = theme === 'light' ? activeStyleLight : activeStyleDark
 
     return (

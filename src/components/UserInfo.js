@@ -1,4 +1,3 @@
-import React from 'react'
 import queryString from 'query-string'
 import useFetchUser from '../hooks/useFetchUser'
 import Loading from './Loading'
@@ -61,6 +60,3 @@ export default function UserInfo() {
         </div>
     )
 }
-
-// type === 'story' && dead !== true
-//                                     &&

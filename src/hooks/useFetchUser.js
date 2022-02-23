@@ -1,16 +1,16 @@
-import React from 'react'
+import { useState, useEffect } from 'react'
 import { getUserInfo } from '../utils/api'
 import PropTypes from 'prop-types'
 
 export default function useFetchUser(userId) {
 
-    const [ user, setUser ] = React.useState([])
-    const [ userStories, setUserStories ] = React.useState([])
-    const [ storiesLoading, setStoriesLoading ] = React.useState(false)
-    const [ isLoading, setIsLoading ] = React.useState(false)
-    const [ isError, setIsError ] = React.useState(false)
+    const [ user, setUser ] = useState([])
+    const [ userStories, setUserStories ] = useState([])
+    const [ storiesLoading, setStoriesLoading ] = useState(false)
+    const [ isLoading, setIsLoading ] = useState(false)
+    const [ isError, setIsError ] = useState(false)
     
-    React.useEffect(() => {
+    useEffect(() => {
 
         setIsError(false)
         setIsLoading(true)

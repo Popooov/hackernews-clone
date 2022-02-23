@@ -1,21 +1,22 @@
 const hackerNewsURI = `https://hacker-news.firebaseio.com/v0/`
 const hackerNewsItems = `${hackerNewsURI}item/`
 const hackerNewsUsers = `${hackerNewsURI}user/`
+const pretty = '.json?print=pretty'
 
 function fetchStories(stories) {
-    return fetch(`${hackerNewsURI}${stories}.json?print=pretty`)
+    return fetch(`${hackerNewsURI}${stories}${pretty}`)
 }
 
 // fetchItem can fetch Story or Comment
 export async function fetchItem(item) {
-    const res = await fetch(`${hackerNewsItems}${item}.json?print=pretty`)
+    const res = await fetch(`${hackerNewsItems}${item}${pretty}`)
     const data = await res.json()
 
     return data
 }
 
 function fetchUser(user) {
-    return fetch(`${hackerNewsUsers}${user}.json?print=pretty`)
+    return fetch(`${hackerNewsUsers}${user}${pretty}`)
 }
 
 export async function getUserInfo(id) {

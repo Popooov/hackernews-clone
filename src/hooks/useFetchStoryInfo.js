@@ -1,14 +1,14 @@
-import React from 'react'
+import { useState, useEffect } from 'react'
 import { fetchItem, getUserItems } from '../utils/api'
 
 export default function useFetchStoryrInfo(item) {
-    const [ story, setStory ] = React.useState([])
-    const [ comments, setComments ] = React.useState([])
-    const [ commentsLoading, setCommentsLoading ] = React.useState(false)
-    const [ isLoading, setIsLoading ] = React.useState(false)
-    const [ isError, setIsError ] = React.useState(false)
+    const [ story, setStory ] = useState([])
+    const [ comments, setComments ] = useState([])
+    const [ commentsLoading, setCommentsLoading ] = useState(false)
+    const [ isLoading, setIsLoading ] = useState(false)
+    const [ isError, setIsError ] = useState(false)
 
-    React.useEffect(() => {
+    useEffect(() => {
 
         setIsError(false)
         setIsLoading(true)

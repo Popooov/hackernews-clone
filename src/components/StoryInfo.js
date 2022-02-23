@@ -1,4 +1,3 @@
-import React from 'react'
 import useFetchStoryInfo from '../hooks/useFetchStoryInfo'
 import queryString from 'query-string'
 import { useLocation } from "react-router-dom"

@@ -1,4 +1,3 @@
-import React from 'react'
 import Story from './Story'
 import useFetchStories from '../hooks/useFetchStories'
 import Loading from './Loading'
