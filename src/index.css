@@ -236,7 +236,7 @@ input:checked + .slider:before {
 
 .comment-text-dark, 
 .comment-link-dark {
-  color: #212121;
+  color: #f6f7f9;
 }
 
 .comment {
@@ -246,17 +246,21 @@ input:checked + .slider:before {
   border-radius: .25em;
 }
 
-/* .comment-text p {
-  overflow-anchor: ;
-} */
-
 .comment-dark {
-  background: #f4f5f7;
+  background: #343a46;
 }
 
 .comment-text-light p,
 .comment-text-dark p {
   margin-top: 1em;
+}
+
+.comment-text-light p a {
+  color: #212121;
+}
+
+.comment-text-dark p a {
+  color: #f6f7f9;
 }
 
 pre {
