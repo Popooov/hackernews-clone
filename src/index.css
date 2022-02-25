@@ -247,7 +247,7 @@ input:checked + .slider:before {
 }
 
 .comment-dark {
-  background: #343a46;
+  background: #263238;
 }
 
 .comment-text-light p,
