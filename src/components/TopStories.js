@@ -7,7 +7,7 @@ export default function Top() {
 
     const [ topStories, { isLoading, isError } ] = useFetchStories(`topstories`)
     
-    if(isError) return <p className='error'>Erro</p>
+    if(isError) return <p className='error'>Error</p>
     if(isLoading) return <Loading />
 
     return (
