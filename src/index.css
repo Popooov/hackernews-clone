@@ -181,6 +181,7 @@ input:checked + .slider:before {
 
 .story-info {
   margin-bottom: 1.6em;
+  white-space: pre-wrap;
 }
 
 .title-link {
@@ -330,5 +331,15 @@ pre {
 @media (min-width: 500px) {
   .container {
     padding: 0 2em;
+  }
+}
+
+@media (min-width: 1000px) {
+  .container-light {
+    background: rgb(248, 248, 248);
+  }
+  
+  .container-dark {
+    background: #1f2529;
   }
 }

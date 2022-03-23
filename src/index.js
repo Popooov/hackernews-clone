@@ -19,7 +19,7 @@ function App() {
       <Router>
         <ThemeProvider value={theme}>
           <div className={theme}>
-            <div className='container'>
+            <div className={`container container-${theme}`}>
               <Nav toggleTheme={toggleTheme} />
 
               <Suspense fallback={<Loading />}>
