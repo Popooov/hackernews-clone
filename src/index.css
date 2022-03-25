@@ -1,7 +1,5 @@
 html, body, #app {
   margin: 0;
-  height: 100%;
-  width: 100%;
 }
 
 body {
@@ -31,10 +29,10 @@ h2 {
   flex-direction: column;
   padding-bottom: 2em;
   max-width: 900px;
-  height: 100vh;
   margin: 0 auto;
   overflow-anchor: auto;
   overflow-wrap: break-word;
+  min-height: 100vh;
 }
 
 .container ul, .nav-flex {
@@ -337,7 +335,7 @@ pre {
 
 @media (min-width: 1000px) {
   .container-light {
-    background: rgb(248, 248, 248);
+    background: rgb(250, 250, 250);
   }
   
   .container-dark {
