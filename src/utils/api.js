@@ -20,7 +20,6 @@ function fetchUser(user) {
 }
 
 export async function getUserInfo(id) {
-
     const res = await fetchUser(id)
     const data = await res.json()
     const { submitted } = data
@@ -30,7 +29,6 @@ export async function getUserInfo(id) {
 }
 
 export async function getUserItems(userItems) {
-
     let fetched = userItems.map( async (i) => {
         const data = await fetchItem(i)
         return data
@@ -49,7 +47,6 @@ async function get50items(items) {
 }
 
 export async function getItems(item) {
-
     const res = await fetchStories(item)
     const data = await res.json()
     const items = data.slice(0, 50)
@@ -58,7 +55,6 @@ export async function getItems(item) {
 }
 
 export function timeConverter(time) {
-    
     const milliseconds = time * 1000
     const dateObject = new Date(milliseconds)
     const date = dateObject.toLocaleString("en-US", {timeZone: "UTC"})
