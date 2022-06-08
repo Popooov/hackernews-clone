@@ -3,23 +3,19 @@ const hackerNewsItems = `${hackerNewsURI}item/`
 const hackerNewsUsers = `${hackerNewsURI}user/`
 const pretty = '.json?print=pretty'
 
-function fetchStories(stories) {
-    return fetch(`${hackerNewsURI}${stories}${pretty}`)
-}
+const fetchStories = (stories) => fetch(`${hackerNewsURI}${stories}${pretty}`)
 
 // fetchItem can fetch Story or Comment
-export async function fetchItem(item) {
+export const fetchItem = async (item) => {
     const res = await fetch(`${hackerNewsItems}${item}${pretty}`)
     const data = await res.json()
 
     return data
 }
 
-function fetchUser(user) {
-    return fetch(`${hackerNewsUsers}${user}${pretty}`)
-}
+const fetchUser = (user) => fetch(`${hackerNewsUsers}${user}${pretty}`)
 
-export async function getUserInfo(id) {
+export const getUserInfo = async (id) => {
     const res = await fetchUser(id)
     const data = await res.json()
     const { submitted } = data
@@ -28,7 +24,7 @@ export async function getUserInfo(id) {
     return { data, stories }
 }
 
-export async function getUserItems(userItems) {
+export const getUserItems = async (userItems) => {
     let fetched = userItems.map( async (i) => {
         const data = await fetchItem(i)
         return data
@@ -37,7 +33,7 @@ export async function getUserItems(userItems) {
     return Promise.all(fetched)
 }
 
-async function get50items(items) {
+const get50items = async (items) => {
     let fetched = items.map( async (i) => {
         const data = await fetchItem(i)
         return data
@@ -46,7 +42,7 @@ async function get50items(items) {
     return Promise.all(fetched)
 }
 
-export async function getItems(item) {
+export const getItems = async (item) => {
     const res = await fetchStories(item)
     const data = await res.json()
     const items = data.slice(0, 50)
@@ -54,7 +50,7 @@ export async function getItems(item) {
     return get50items(items)
 }
 
-export function timeConverter(time) {
+export const timeConverter = (time) => {
     const milliseconds = time * 1000
     const dateObject = new Date(milliseconds)
     const date = dateObject.toLocaleString("en-US", {timeZone: "UTC"})
