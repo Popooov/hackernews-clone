@@ -30,7 +30,7 @@ export default function Story({ by, about, date, karma, descendants, id, storyID
                                 pathname:'/story',
                                 search: `?id=${storyID}`
                             }}>
-                                {descendants}
+                                {!descendants ? 0 : descendants}
                             </Link>
                         <span> comments</span>
                     </div>
@@ -62,7 +62,7 @@ export default function Story({ by, about, date, karma, descendants, id, storyID
                                     pathname:'/story',
                                     search: `?id=${storyID}`
                                 }}>
-                                    {descendants === false ? '0' : descendants}
+                                    {!descendants ? 0 : descendants}
                                 </Link>
                             <span> comments</span>
                         </div>
