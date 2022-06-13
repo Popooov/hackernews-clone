@@ -3,7 +3,7 @@ import useFetchStories from '../hooks/useFetchStories'
 import Loading from './Loading'
 import { timeConverter } from '../utils/api'
 
-export default function Top() {
+const Top = () => {
 
     const [ topStories, { isLoading, isError } ] = useFetchStories(`topstories`)
     
@@ -18,19 +18,20 @@ export default function Top() {
 
                 return (
                     <li key={id} >
-                            <Story
-                                by={by}
-                                date={date}
-                                storyID={id}
-                                descendants={descendants}
-                                url={url}
-                                title={title}
-                                type={type}
-                            />
+                        <Story
+                            by={by}
+                            date={date}
+                            storyID={id}
+                            descendants={descendants}
+                            url={url}
+                            title={title}
+                            type={type}
+                        />
                     </li>
                 )
             })}
         </ul>
     )
 }
-// className='story'
+
+export default Top

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import ThemeContext from '../contexts/theme'
 
-export default function Story({ by, about, date, karma, descendants, id, storyID, url, title, type, text, comment, author }) {
+const Story = ({ by, about, date, karma, descendants, id, storyID, url, title, type, text, comment, author }) => {
 
     const theme = useContext(ThemeContext)
 
@@ -116,3 +116,5 @@ Story.propTypes = {
     comment: PropTypes.string,
     author: PropTypes.string
 }
+
+export default Story

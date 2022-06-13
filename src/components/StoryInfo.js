@@ -5,7 +5,7 @@ import Loading from './Loading'
 import Story from './Story'
 import { timeConverter } from '../utils/api'
 
-export default function StoryInfo() {
+const StoryInfo = () => {
 
     const { id } = queryString.parse(useLocation().search)
     const { story, comments, isLoading, commentsLoading, isError } = useFetchStoryInfo(id)
@@ -53,3 +53,5 @@ export default function StoryInfo() {
         </div>
     )
 }
+
+export default StoryInfo

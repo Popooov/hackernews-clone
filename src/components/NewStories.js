@@ -18,15 +18,15 @@ const New = () =>  {
                 
                 return (
                     <li key={id} >
-                            <Story
-                                by={by}
-                                date={date}
-                                storyID={id}
-                                descendants={descendants}
-                                url={url}
-                                title={title}
-                                type={type}
-                            />
+                        <Story
+                            by={by}
+                            date={date}
+                            storyID={id}
+                            descendants={descendants}
+                            url={url}
+                            title={title}
+                            type={type}
+                        />
                     </li>
                 )
             })}

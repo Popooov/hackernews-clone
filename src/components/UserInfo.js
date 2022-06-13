@@ -5,7 +5,7 @@ import Story from './Story'
 import { useLocation } from "react-router-dom"
 import { timeConverter } from '../utils/api'
 
-export default function UserInfo() {
+const UserInfo = () => {
 
     const { id } = queryString.parse(useLocation().search)
     const { user, userStories, isLoading, storiesLoading, isError } = useFetchUser(id)
@@ -60,3 +60,5 @@ export default function UserInfo() {
         </div>
     )
 }
+
+export default UserInfo
