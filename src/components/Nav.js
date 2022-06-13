@@ -13,7 +13,7 @@ const activeStyleDark = {
     background: '#E0E0E0',
 }
 
-export default function Nav({ toggleTheme }) {
+const Nav = ({ toggleTheme }) => {
 
     const theme = useContext(ThemeContext)
     const activeStyle = theme === 'light' ? activeStyleLight : activeStyleDark
@@ -63,3 +63,5 @@ export default function Nav({ toggleTheme }) {
 Nav.propTypes = {
     toggleTheme: PropTypes.func.isRequired
 }
+
+export default Nav

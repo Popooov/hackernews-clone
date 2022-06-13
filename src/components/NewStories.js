@@ -3,7 +3,7 @@ import Story from './Story'
 import Loading from './Loading'
 import { timeConverter } from '../utils/api'
 
-export default function New() {
+const New = () =>  {
 
     const [ newStories, { isLoading, isError } ] = useFetchStories(`newstories`)
 
@@ -33,3 +33,5 @@ export default function New() {
         </ul>
     )
 }
+
+export default New

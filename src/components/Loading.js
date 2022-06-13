@@ -13,12 +13,7 @@ const styles = {
     }
 }
 
-Loading.propTypes = {
-    text: PropTypes.string,
-    speed: PropTypes.number
-}
-
-export default function Loading({ text = 'Loading', speed = 300 }) {
+const Loading = ({ text = 'Loading', speed = 300 })  => {
     const [ content, setContent ] = useState(text)
 
     useEffect(() => {
@@ -40,3 +35,9 @@ export default function Loading({ text = 'Loading', speed = 300 }) {
     )
 }
 
+Loading.propTypes = {
+    text: PropTypes.string,
+    speed: PropTypes.number
+}
+
+export default Loading
