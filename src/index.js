@@ -1,5 +1,5 @@
 import { useState, lazy, Suspense, StrictMode } from 'react'
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import './index.css'
 import Nav from './components/Nav'
 import Loading from './components/Loading'
@@ -38,10 +38,11 @@ function App() {
     );
 }
   
+const container = document.getElementById('root')
+const root = createRoot(container)
 
-ReactDOM.render(
+root.render(
   <StrictMode>
     <App />
-  </StrictMode>,
-   document.getElementById('root')
+  </StrictMode>
 )
