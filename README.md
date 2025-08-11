@@ -10,7 +10,7 @@ El objetivo principal fue poner en práctica conceptos clave de React como:
 - Componentes funcionales
 - **React Hooks** (`useState`, `useEffect`)
 - **Context API** para gestión de estado global (modo claro/oscuro)
-- React Router para navegación
+- **React Router** para navegación
 - **React Suspense** para manejo de carga asincrónica
 - Renderizado condicional
 - Llamadas a API y manejo de datos asincrónicos
