@@ -1,68 +1,56 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Hacker News Clone - React
 
-## Available Scripts
+Este proyecto es una implementación de un clon (simplificado) de **Hacker News**, desarrollado siguiendo los requisitos del **proyecto curricular** del curso de **React** de [ui.dev](https://ui.dev/react).
 
-In the project directory, you can run:
+## Descripción
 
-### `npm start`
+La aplicación consume la **Hacker News API** para mostrar publicaciones, comentarios y detalles de cada noticia.  
+El objetivo principal fue poner en práctica conceptos clave de React como:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Componentes funcionales
+- **React Hooks** (`useState`, `useEffect`)
+- **Context API** para gestión de estado global (modo claro/oscuro)
+- React Router para navegación
+- **React Suspense** para manejo de carga asincrónica
+- Renderizado condicional
+- Llamadas a API y manejo de datos asincrónicos
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Demo
 
-### `npm test`
+- **Deploy en producción**: [Enlace a Netlify](https://hackernews-clone-hooks.netlify.app/)  
+- **Repositorio**: [GitHub](https://github.com/Popooov/hackernews-clone)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tecnologías usadas
 
-### `npm run build`
+- [React](https://react.dev/)
+- [React Router](https://reactrouter.com/)
+- **Context API** (estado global)
+- Fetch API
+- HTML5 + CSS3
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Funcionalidades
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- Ver la lista de publicaciones más recientes y más votadas
+- Consultar detalles de cada publicación
+- Mostrar comentarios anidados
+- **Cambiar entre modo claro y modo oscuro** usando Context API
+- Navegación entre vistas con React Router
+- **Renderizado optimizado con React Suspense** para mostrar contenido asincrónico
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Instalación y ejecución
 
-### `npm run eject`
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/Popooov/hackernews-clone.git
+   
+2. Instala dependencias:
+   ```bash
+   npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+3. Ejecuta el servidor de desarrollo:
+   ```bash
+   npm start
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+4. Abre en tu navegador:
+   ```bash
+   http://localhost:3000
