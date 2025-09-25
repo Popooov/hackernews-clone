@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import Nav from './components/Nav'
 import Loading from './components/Loading'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { ThemeProvider } from './contexts/theme'
 const TopStories = lazy(() => import('./components/TopStories'))
 const NewStories = lazy(() => import('./components/NewStories'))
@@ -23,13 +23,13 @@ function App() {
               <Nav toggleTheme={toggleTheme} />
 
               <Suspense fallback={<Loading />}>
-                <Switch>
-                  <Route exact path='/' component={TopStories} />
-                  <Route exact path='/new' component={NewStories} />
-                  <Route exact path='/user' component={UserInfo} />
-                  <Route exact path='/story' component={StoryInfo} />
+                <Routes>
+                  <Route exact path='/' element={<TopStories />} />
+                  <Route exact path='/new' element={<NewStories />} />
+                  <Route exact path='/user' element={<UserInfo />} />
+                  <Route exact path='/story' element={<StoryInfo />} />
                   <Route render={() => <h1>404</h1>} />
-                </Switch>
+                </Routes>
               </Suspense>
             </div>
           </div>
