@@ -4,11 +4,13 @@
   "private": true,
   "type": "module",
   "dependencies": {
+    "@tailwindcss/vite": "^4.1.13",
     "prop-types": "^15.8.1",
     "query-string": "^6.14.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.30.1"
+    "react-router-dom": "^6.30.1",
+    "tailwindcss": "^4.1.13"
   },
   "scripts": {
     "dev": "vite",
